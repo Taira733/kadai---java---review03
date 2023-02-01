@@ -2,9 +2,9 @@ package baseball;
 
 public class BaseBallTeam {
     private String name; // チーム名
-    private int win;     // 勝利数
-    private int lose;    // 敗北数
-    private int draw;    // 引分数
+    private int win; // 勝利数
+    private int lose; // 敗北数
+    private int draw; // 引分数
 
     public BaseBallTeam() {
 
@@ -50,15 +50,13 @@ public class BaseBallTeam {
     }
 
     public void report() {
-        double rate = getRate(win,lose);
-        System.out.println(name + "の2022年の成績は" + this.win + "勝" + this.lose + "敗" + this.draw + "分、勝率は" + rate + "です。" );
+        double rate = getRate();
+        System.out.println(name + "の2022年の成績は" + this.win + "勝" + this.lose + "敗" + this.draw + "分、勝率は" + rate + "です。");
     }
 
-    public double getRate(int win, int lose) {
+    public double getRate() {
         double rate = (double) win / (win + lose);
         return rate;
 
     }
-    }
-
-
+}
